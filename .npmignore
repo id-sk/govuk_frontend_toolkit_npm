@@ -2,4 +2,4 @@ publish.sh
 .travis/
 .travis.yml
 VERSION.txt
-govuk_frontend_toolkit/
+idsk_frontend_toolkit/
