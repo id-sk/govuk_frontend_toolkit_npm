@@ -1,7 +1,7 @@
-# GOV.UK frontend toolkit npm package
+# ID-SK frontend toolkit npm package
 
-This is an npm package for [the GOV.UK frontend toolkit][toolkit].
-It bundles up the toolkit and publishes [govuk_frontend_toolkit on the npmjs
+This is an npm package for [the ID-SK frontend toolkit][toolkit].
+It bundles up the toolkit and publishes [idsk_frontend_toolkit on the npmjs
 registry][npmjs] so that you can install it as a dependency in your JavaScript
 application.
 
@@ -10,7 +10,7 @@ application.
 To include the toolkit in your project run:
 
 ```
-npm install --save govuk_frontend_toolkit
+npm install --save idsk_frontend_toolkit
 ```
 
 This will install the toolkit inside your `node_modules` and will add the
@@ -30,6 +30,6 @@ version in `VERSION.txt` is newer than the version published on NPM registry.
 [MIT License](LICENCE)
 
 
-[toolkit]: https://github.com/alphagov/govuk_frontend_toolkit
-[npmjs]: https://www.npmjs.org/package/govuk_frontend_toolkit
-[trigger]: https://github.com/alphagov/govuk_frontend_toolkit/blob/master/trigger.sh
+[toolkit]: https://github.com/id-sk/idsk_frontend_toolkit
+[npmjs]: https://www.npmjs.org/package/idsk_frontend_toolkit
+[trigger]: https://github.com/id-sk/idsk_frontend_toolkit/blob/master/trigger.sh
