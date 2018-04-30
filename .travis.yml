@@ -4,11 +4,11 @@ branches:
   only:
   - master
 before_install:
-- openssl aes-256-cbc -K $encrypted_20fd811ec9c2_key -iv $encrypted_20fd811ec9c2_iv
+- openssl aes-256-cbc -K $encrypted_b7ed5e41b0c5_key -iv $encrypted_b7ed5e41b0c5_iv
   -in .travis/idsk_frontend_toolkit_npm_push.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
-- git config --global user.name "GOV.UK Design System CI"
-- git config --global user.email "design-system-pipeline@digital.cabinet-office.gov.uk"
+- git config --global user.name "ID-SK CI"
+- git config --global user.email "ernest.walzel+idsk@slovensko.digital"
 - git remote add origin_ssh git@github.com:id-sk/idsk_frontend_toolkit_npm.git
 install:
 - echo "No dependencies to install"
@@ -16,8 +16,8 @@ script:
 - "./publish.sh"
 deploy:
   provider: npm
-  email: govuk-dev@digital.cabinet-office.gov.uk
+  email: ernest.walzel+idsk@slovensko.digital
   api_key:
-    secure: gaYyBRr6M6E2ptNDKSKs/R8SMF+WcIOKao6EGpZj6iZY+rjCrfg0Kd5xFo0BsptQ9+8ZFcIfUNY2RpmgrQejrpZ88FsiA3235mY2ugKNg+oyigYq0+dY4cfSXcNvogPz/p53+5M+8oVBHfCCfh2qEt4zRA/4MBfOROgAnjWtCH4=
+    secure: "U0HCZUuGxEJnxFFdh2SiGPj3DtpGDMePYzw/qfqGb69aWPa8qZ+tB8zRKI1vq8Jo0QqjQCMY0c+kccJVIKWLG9R0giolzRxK8WKAu3KmsY4dfzSxqBO7URM+w3w8b7dviiFWeSAEN1WEbT1zFYD0EWmtJfr4NLEjXoFbgqoXA37Gm+39YS+PM0u6MHfnx7FmdkAe300LfVHncFXLwkoMHKb6P/s8exuvA/ux6OgwQW32qPPlmzaylK8zc7jh1W91NfAMxew8QNqiqg52/3ErlLreBhBPKcEvaQzpCRTn++VXQxW9msJDbf/x5cWdBMTuCY1HFUv7AVIBShB8BFN4QNmct68NLraRImrAM/cCCFWzcKwCta/mxF3lqJmffOfbkwicmFZa24ismu4CiLOjtZSIODUVBgCSrkVXe1+zEafln9KakNZYzYbOt9OHUHoZTDt2VULcqF/Y9qBJi1w12QLbxdqNqJP0Dtpimszj4TGQSrlZgoYKld9w8tmPxLoBu7cd2YSyZ2rBjqGKsp13HL25TnhxqmVhLl8m4WhqHs24DF8ORPYveQji4rtaBCCdAJLosNfn+hfCtq4FeX/KgUVNYCMYqbhme3w1oaJG2Au7DhMWbJ2nd+j4C9B9p1efAOH7g2sLeSbbB03q995IjtNCaovJ6B2iGp5eIrgWfbk="
   on:
     branch: master
