@@ -1,6 +1,6 @@
 {
   "name": "idsk_frontend_toolkit",
-  "version": "7.4.2",
+  "version": "7.4.3",
   "description": "npm package for using the ID-SK frontend toolkit",
   "repository": {
     "type": "git",
