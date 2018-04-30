@@ -8,11 +8,11 @@ set -e
 git checkout master
 git reset --hard origin/master
 
-wget https://github.com/alphagov/govuk_frontend_toolkit/archive/master.tar.gz -O new-toolkit.tar.gz
+wget https://github.com/id-sk/idsk_frontend_toolkit/archive/master.tar.gz -O new-toolkit.tar.gz
 
 tar -xzf new-toolkit.tar.gz
 
-cd govuk_frontend_toolkit-master/
+cd idsk_frontend_toolkit-master/
 
 # Remove the package.json (with -f so that we don't fail if it doesn't exist)
 rm -f package.json
@@ -42,7 +42,7 @@ rsync --delete --archive * ..
 
 cd ..
 
-rm -r govuk_frontend_toolkit-master
+rm -r idsk_frontend_toolkit-master
 rm new-toolkit.tar.gz
 
 echo "Check to see if the version file has been updated"
@@ -52,7 +52,7 @@ VERSION_LATEST=`cat VERSION.txt`
 echo "Version in VERSION.txt: $VERSION_LATEST"
 
 # get the version from npm
-VERSION_REGISTRY=`npm view govuk_frontend_toolkit version`
+VERSION_REGISTRY=`npm view idsk_frontend_toolkit version`
 echo "Version of npm package: $VERSION_REGISTRY"
 
 if [ "$VERSION_LATEST" != "$VERSION_REGISTRY" ]; then
@@ -64,7 +64,7 @@ if [ "$VERSION_LATEST" != "$VERSION_REGISTRY" ]; then
   # https://git-scm.com/docs/git-add#git-add--A
   git add --all
 
-  git commit -m "Bump npm version of govuk_frontend_toolkit to $VERSION_LATEST"
+  git commit -m "Bump npm version of idsk_frontend_toolkit to $VERSION_LATEST"
   git push origin_ssh master
 else
   echo 'VERSION.txt is the same as the version available on the registry'
